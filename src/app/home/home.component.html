@@ -1,0 +1,74 @@
+<div class="d-flex flex-column bg" style="">
+
+  <div style="position:fixed;top:0;width:100%;">
+      <app-header></app-header>
+  </div>
+
+<div class="mat-elevation-z6" style="width:75%;text-align:center;">
+  <mat-accordion>
+
+    <mat-expansion-panel style="opacity:.93;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+        <mat-icon class="text-primary" style="margin-right:10px;">person_outline</mat-icon>
+        Create A New Room
+        </mat-panel-title>
+        <mat-panel-description>
+      </mat-panel-description>
+      </mat-expansion-panel-header>
+      <button class="btn btn-primary" (click)="onCreate()">Public</button>
+      <button class="btn btn-secondary" disabled>Private</button>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel style="opacity:.93;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon class="text-primary" style="margin-right:10px;">group_add</mat-icon>
+          Join A Chat
+        </mat-panel-title>
+        <mat-panel-description>
+
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <form (ngSubmit)="onJoin(f.value.room)" #f=ngForm>
+        <mat-form-field style="width:60%;">
+          <input matInput placeholder="Room"
+                          class="form-control form-control-lg"
+                          ngModel
+                          #room="ngModel"
+                          name="room"
+                          required>
+        </mat-form-field>
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Join</button>
+      </form>
+
+    </mat-expansion-panel>
+
+    <mat-expansion-panel style="opacity:.93;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon class="text-primary" style="margin-right:10px;">question_answer</mat-icon>
+          F.A.Q.
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <h4 class="text-primary">What is Chit Chat?</h4>
+      <p>Chit Chat is a simple, lightweight chat client so you can worry less about users and logins and focus on what matters: chatting!</p>
+      <br>
+      <h4 class="text-primary">How do I start chatting?</h4>
+      <p>Create a new room above and choose a name. (Private rooms coming soon!)</p>
+      <br>
+      <h4 class="text-primary">How do I invite others to a chat?</h4>
+      <p>Users can join a chat room by going directly to an open room's url, or by using the join form above with a valid room id.</p>
+      <br>
+      <h4 class="text-primary">What about all of my other questions?</h4>
+      <p>This is an ongoing open-source project from students at Oregon State University, and will be updated periodically. Check the github repository for more info!</p>
+      <br>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>
+
+
+</div>

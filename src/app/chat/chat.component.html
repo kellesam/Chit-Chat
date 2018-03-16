@@ -1,0 +1,40 @@
+<div class="chat-container d-flex flex-column bg" *ngIf="username">
+
+  <app-header></app-header>
+
+  <div class="d-flex flex-column align-items-stretch" style="height:100%;">
+
+    <div class="d-flex flex-row align-items-stretch" style="height:95%;width:100%;">
+      <mat-card id="sidebar" class="d-flex flex-column align-items-between justify-content-between mat-elevation-z6">
+
+        <app-sidebar></app-sidebar>
+
+      </mat-card>
+
+      <mat-card id="main-window" class="d-flex p-2 flex-column mat-elevation-z6">
+
+        <h4 style="margin: 10px auto;">Room: <span class="badge badge-secondary">{{room}}</span></h4>
+
+        <div id="messages" #messagesScroll>
+
+          <p #messages *ngFor="let message of messages | async" onchange="console.log('changed from inside');">
+            <span *ngIf="message.type == 'user-message'"><span class="text-muted" style="font-size:8px;margin-right:3px;"><em>{{message.timeStamp | date: 'shortTime'}}</em></span> <strong>{{message.username}}:</strong> {{message.content}}</span>
+            <span *ngIf="message.type == 'user-joined'" style="color:#2196F3;"><em><strong>{{message.username}}</strong> joined the room at {{message.timeStamp | date: 'shortTime'}}</em></span>
+            <span *ngIf="message.type == 'user-disconnect'" style="color:#2196F3;"><em><strong>{{message.username}}</strong> left the room at {{message.timeStamp | date: 'shortTime'}}</em></span>
+          </p>
+
+        </div>
+
+        <div id="chat-input">
+
+         <app-input></app-input>
+
+        </div>
+
+      </mat-card>
+
+    </div>
+
+  </div>
+
+</div>

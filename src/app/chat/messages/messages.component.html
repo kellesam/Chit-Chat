@@ -1,0 +1,5 @@
+<p #messages *ngFor="let message of messages | async" onchange="console.log('changed from inside');">
+  <span *ngIf="message.type == 'user-message'"><span class="text-muted" style="font-size:8px;margin-right:3px;"><em>{{message.timeStamp | date: 'shortTime'}}</em></span> <strong>{{message.username}}:</strong> {{message.content}}</span>
+  <span *ngIf="message.type == 'user-joined'" style="color:#2196F3;"><em><strong>{{message.username}}</strong> joined the room at {{message.timeStamp | date: 'shortTime'}}</em></span>
+  <span *ngIf="message.type == 'user-disconnect'" style="color:#2196F3;"><em><strong>{{message.username}}</strong> left the room at {{message.timeStamp | date: 'shortTime'}}</em></span>
+</p>

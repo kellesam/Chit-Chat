@@ -1,0 +1,13 @@
+<form #f="ngForm" (ngSubmit)="onSend(f.value.message); f.reset();" style="margin-top:10px;margin-bottom:10px">
+
+  <input ngModel
+         name="message"
+         #message="ngModel"
+         class="form-control"
+         type="text"
+         placeholder="Type here..."
+         autocomplete="off">
+
+  <button hidden class="btn btn-primary" type="submit">SEND</button>
+
+</form>

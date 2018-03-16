@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+/*
+@font-face {
+    font-family: 'easy_speechregular';
+    src: url('./assets/styles/fonts/easy_speech_free-webfont.woff2') format('woff2'),
+         url('./assets/styles/fonts/easy_speech_free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p { font-family: 'easy_speechregular', Arial, sans-serif; }
+p {
+  font-size: 22px;
+}
+*/
