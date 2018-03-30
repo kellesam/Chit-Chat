@@ -1,7 +1,7 @@
 # Chit Chat
 
 ## Overview
-Chit Chat is an ongoing open-source project that originated from Oregon State University's Capstone program.  Original team members are Michael Namoff, Sam Keller, and Jimmy Kao.
+Chit Chat is an ongoing open-source project that originated from Oregon State University's Capstone program.  Original team members are Michael Namoff (Architecture / Front End), Sam Keller (Socket.io), and Jimmy Kao (Node / Express).
 
 ## Code
 
